@@ -4,6 +4,22 @@ A Luong‑Attention Seq2Seq chatbot with a Chaotic Neural‑Oscillatory LSTM (CN
 
 ---
 
+## Application: Thinking Parrot (WeChat mini‑program)
+
+The English learning chatbot is implemented in a WeChat mini‑program named "Thinking Parrot," designed to promote and facilitate English concept learning. The program provides various tools to help and motivate learners, such as collection, daily check‑in, and rank list. The whole learning process is divided into six levels; the first four are implemented (concept introduction, multiple‑choice and oral questions). This FYP focuses on implementing the last level — a chatbot that places learners in more realistic English settings to help them master concept learning through daily chat.
+
+Repository: [Thinking Parrot](https://github.com/liafonx/ThinkingParrot)
+
+---
+
+## Highlights
+- CNO‑LSTM (Lee‑Oscillator) integrated into LSTM for chaotic oscillatory dynamics.
+- Vectorized, deterministic Lee‑Oscillator activations (GPU‑friendly; no runtime randomness).
+- Drop‑in with provided Seq2Seq + Luong attention code (no API friction).
+- Reproducible evaluation assets: training/dialog comparisons and full thesis.
+
+---
+
 ## Model Overview
 
 ![CNO‑LSTM Seq2Seq](./Att-CNO-LSTM-Seq2Seq.png)
@@ -20,13 +36,24 @@ Compared with a simple imitation of artificial neural networks, chaotic neural n
 
 ---
 
-## Highlights
-- CNO‑LSTM (Lee‑Oscillator) integrated into LSTM for chaotic oscillatory dynamics.
-- Vectorized, deterministic Lee‑Oscillator activations (GPU‑friendly; no runtime randomness).
-- Drop‑in with provided Seq2Seq + Luong attention code (no API friction).
-- Reproducible evaluation assets: training/dialog comparisons and full thesis.
+## Results (summary)
+- In internal experiments, the CNO‑LSTM converged faster and achieved lower loss than a vanilla LSTM under comparable settings.
+- Qualitatively, responses tend to be more coherent and context‑aware compared to the vanilla baseline.
 
 ---
+
+## Evaluation
+
+- Training loss comparison and convergence:
+
+![Training comparison](./Model-Evaluation-Training.png)
+
+- Example dialogue outputs (Chaotic LSTM vs. vanilla LSTM):
+
+![Dialog comparison](./Model-Evaluation-Dialog.png)
+
+- Experiment setup (from thesis): Cornell Movie‑Dialogs, Seq2Seq + Luong attention, matched training regime for LSTM vs. CNO‑LSTM. See thesis for metrics and full details.
+- Full paper (HTML): [Language Chatbot 3.0 — 2022](./paper/Language%20Chatbot%203.0_FYP%20Thesis_2022.html)
 
 ## Requirements
 - Python 3.8+
@@ -102,27 +129,6 @@ Notes
 
 ---
 
-## Results (summary)
-- In internal experiments, the CNO‑LSTM converged faster and achieved lower loss than a vanilla LSTM under comparable settings.
-- Qualitatively, responses tend to be more coherent and context‑aware compared to the vanilla baseline.
-
----
-
-## Evaluation
-
-- Training loss comparison and convergence:
-
-![Training comparison](./Model-Evaluation-Training.png)
-
-- Example dialogue outputs (Chaotic LSTM vs. vanilla LSTM):
-
-![Dialog comparison](./Model-Evaluation-Dialog.png)
-
-- Experiment setup (from thesis): Cornell Movie‑Dialogs, Seq2Seq + Luong attention, matched training regime for LSTM vs. CNO‑LSTM. See thesis for metrics and full details.
-- Full paper (HTML): [Language Chatbot 3.0 — 2022](./paper/Language%20Chatbot%203.0_FYP%20Thesis_2022.html)
-
----
-
 ## Acknowledgements
 - Authors: Yinong Xu, Zhehan Qi
 - Supervisor: Dr. Raymond S. T. Lee
@@ -134,4 +140,5 @@ Notes
 - Sutskever, Vinyals, Le (2014). Sequence to Sequence Learning with Neural Networks.
 - Bahdanau, Cho, Bengio (2014). Neural Machine Translation by Jointly Learning to Align and Translate.
 - Luong, Pham, Manning (2015). Effective Approaches to Attention‑based NMT.
+- Lee‑Oscillator materials from the authors’ thesis/poster.
 
