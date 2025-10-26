@@ -140,5 +140,4 @@ Notes
 - Sutskever, Vinyals, Le (2014). Sequence to Sequence Learning with Neural Networks.
 - Bahdanau, Cho, Bengio (2014). Neural Machine Translation by Jointly Learning to Align and Translate.
 - Luong, Pham, Manning (2015). Effective Approaches to Attention‑based NMT.
-- Lee‑Oscillator materials from the authors’ thesis/poster.
 
