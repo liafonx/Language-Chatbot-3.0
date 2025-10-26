@@ -12,6 +12,12 @@ A Luong‑Attention Seq2Seq chatbot with a Chaotic Neural‑Oscillatory LSTM (CN
 - Luong Attention: Alignment between the decoder state and encoder states produces a context vector fused into the decoder output at each step.
  - CNO‑LSTM (Lee‑Oscillator): Chaotic oscillatory dynamics used as activation/transfer components to enhance training efficiency and memory recall vs vanilla LSTM.
 
+### CNO‑LSTM structure
+
+![CNO‑LSTM](./CNO-LSTM.png)
+
+Compared with a simple imitation of artificial neural networks, chaotic neural networks approximate biologically inspired neuron behaviors and brain‑like dynamics. They act as dynamic neural units for transient information processing and, considering temporal reaction, chaotic neural oscillators naturally fit high‑efficiency or highly frequent tasks.
+
 ---
 
 ## Highlights
@@ -128,9 +134,4 @@ Notes
 - Sutskever, Vinyals, Le (2014). Sequence to Sequence Learning with Neural Networks.
 - Bahdanau, Cho, Bengio (2014). Neural Machine Translation by Jointly Learning to Align and Translate.
 - Luong, Pham, Manning (2015). Effective Approaches to Attention‑based NMT.
-- Lee‑Oscillator materials from the authors’ thesis/poster.
 
----
-
-## License
-Add a license (e.g., MIT) before open‑sourcing.
